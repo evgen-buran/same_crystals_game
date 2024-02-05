@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuViewFragment">
+
+    <fragment
+        android:id="@+id/menuViewFragment"
+        android:name="com.buranchikov.samecrystalsgame.fragments.MenuViewFragment"
+        android:label="fragment_menu_view"
+        tools:layout="@layout/fragment_menu_view" >
+        <action
+            android:id="@+id/action_menuViewFragment_to_gameSceneFragment"
+            app:destination="@id/gameSceneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameSceneFragment"
+        android:name="com.buranchikov.samecrystalsgame.fragments.GameSceneFragment"
+        android:label="fragment_game_scene"
+        tools:layout="@layout/fragment_game_scene" >
+        <action
+            android:id="@+id/action_gameSceneFragment_to_endGameFragment"
+            app:destination="@id/endGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endGameFragment"
+        android:name="com.buranchikov.samecrystalsgame.fragments.EndGameFragment"
+        android:label="fragment_end_game"
+        tools:layout="@layout/fragment_end_game" >
+        <action
+            android:id="@+id/action_endGameFragment_to_menuViewFragment"
+            app:destination="@id/menuViewFragment" />
+    </fragment>
+</navigation>
